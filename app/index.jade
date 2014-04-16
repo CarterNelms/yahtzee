@@ -11,28 +11,35 @@ html(lang='en')
     h1 Yahtzee
 
     .pure-g
-      .pure-u-1
+      .pure-u-1-2
         form.pure-form
           fieldset
             legend New Player
             input#username(type="text" placeholder="Username")
             input#avatar(type="text" placeholder="Avatar URL")
             button#add.pure-button.pure-button-primary(type="submit") Add
-
-    .pure-g
-      .pure-u-1
+      .pure-u-1-2
         form.pure-form
           fieldset
-            h3 Scoring
+            legend Scoring
             input#score(type="text" placeholder="Score")
             button#add-score.pure-button.pure-button-primary(type="submit") Add Score
     
     .pure-g
-      .pure-u-1
-        img.arrow#up(src='media/arrow-up.png')
-        img.arrow#down(src='media/arrow-down.png')
-        img.arrow#left(src='media/arrow-left.png')
-        img.arrow#right(src='media/arrow-right.png')
+      .pure-u-1-4
+        img.arrow#up(src='media/images/arrows/arrow-up.png')
+        img.arrow#down(src='media/images/arrows/arrow-down.png')
+        img.arrow#left(src='media/images/arrows/arrow-left.png')
+        img.arrow#right(src='media/images/arrows/arrow-right.png')
+      .pure-u-1-3
+        #dice
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+      .pure-u-5-12
+        button.pure-button.button-success#roll Roll Dice
 
     .pure-g
       .pure-u-1
