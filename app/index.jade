@@ -3,22 +3,76 @@ html(lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Pure Template
+    title Yahtzee
     link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css')
     link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css')
-    link(rel='stylesheet', href='./css/app.css')
+    link(rel='stylesheet', href='css/app.css')
   body
-    h1 Pure Template
+    h1 Yahtzee
 
     .pure-g
       .pure-u-1-2
+        form.pure-form
+          fieldset
+            legend New Player
+            input#username(type="text" placeholder="Username")
+            input#avatar(type="text" placeholder="Avatar URL")
+            button#add.pure-button.pure-button-primary(type="submit") Add
       .pure-u-1-2
-        a.pure-button(href='http://qrohlf.com/trianglify/') Background SVG Image
+        form.pure-form
+          fieldset
+            legend Scoring
+            input#score(type="text" placeholder="Score")
+            button#add-score.pure-button.pure-button-primary(type="submit") Add Score
+    
+    .pure-g
+      .pure-u-1-4
+        img.arrow#up(src='media/images/arrows/arrow-up.png')
+        img.arrow#down(src='media/images/arrows/arrow-down.png')
+        img.arrow#left(src='media/images/arrows/arrow-left.png')
+        img.arrow#right(src='media/images/arrows/arrow-right.png')
+      .pure-u-1-3
+        #dice
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+          img.dice(src='media/images/dice/die1.png')
+      .pure-u-5-12
+        button.pure-button.button-success#roll Roll Dice
 
     .pure-g
-      .pure-u-1-3: a.pure-button.button-success.button-xsmall(href='http://stage.purecss.io/') Documentation
-      .pure-u-1-3: a.pure-button.button-error.button-xlarge(href='http://stage.purecss.io/grids/') Grids
-      .pure-u-1-3: a.pure-button.button-secondary(href='http://stage.purecss.io/grids/#using-grids-with-custom-fonts') Changing Fonts
+      .pure-u-1
+        table#game.pure-table
+          thead
+            tr
+              th Avatar
+              th Name
+              th 1
+              th 2
+              th 3
+              th 4
+              th 5
+              th 6
+              th 7
+              th 8
+              th 9
+              th 10
+              th 11
+              th 12
+              th 13
+              th Total
+          tbody
 
-    script(src='./js/vendor/jquery-2.1.0.js')
-    script(src='./js/source/main.js')
+    //- .pure-g
+    //-   .pure-u-1-2
+    //-   .pure-u-1-2
+    //-     a.pure-button(href='http://qrohlf.com/trianglify/') Background SVG Image
+
+    //- .pure-g
+    //-   .pure-u-1-3: a.pure-button.button-success.button-xsmall(href='http://stage.purecss.io/') Documentation
+    //-   .pure-u-1-3: a.pure-button.button-error.button-xlarge(href='http://stage.purecss.io/grids/') Grids
+    //-   .pure-u-1-3: a.pure-button.button-secondary(href='http://stage.purecss.io/grids/#using-grids-with-custom-fonts') Changing Fonts
+
+    script(src='js/vendor/jquery-2.1.0.js')
+    script(src='js/source/main.js')

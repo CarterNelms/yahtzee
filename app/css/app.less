@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 
 body{
-  background-image: url('../media/bg.svg');
+  background-image: url('../media/triangle-bg.svg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -51,4 +52,44 @@ html, button, input, select, textarea,
 
 .button-xlarge {
   font-size: 150%;
+}
+
+.avatar{
+  height: 50px;
+  width: 50px;
+}
+
+#game > tbody tr:nth-child(2n){
+  background-color: white;
+}
+
+#game > tbody tr:nth-child(2n+1){
+  background-color: #7890b0;
+}
+
+.horizontal{
+  background-color: #d09898 !important;
+}
+
+.vertical{
+  background-color: #e0b088 !important;
+}
+
+#game{
+  opacity: 0.9;
+  font: bold 14px 'Source Code Pro';
+}
+
+.dice{
+  width: 56px;
+  height: 56px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.frozen{
+  border: 5px solid #9461ff;
+  border-radius: 14px;
+  padding: 0;
+  //opacity: 0.75;
 }

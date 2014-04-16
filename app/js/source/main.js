@@ -6,13 +6,44 @@
 
 	var currentUser = 0;
 	var currentRoll = 0;
+<<<<<<< HEAD
+=======
+	var frozen;
+	var numDice;
+>>>>>>> dev
 
 	function initialize()
 	{
 		$('#add').click(add);
 		$('.arrow').click(arrow);
+<<<<<<< HEAD
 		$('body').keypress(move);
 		$('#add-score').click(addScore);
+=======
+		$('body').keydown(move);
+		$('#add-score').click(addScore);
+		$('#roll').click(roll);
+		$('.dice').click(freeze);
+
+		frozen = 0;
+		numDice = $('.dice').length;
+	}
+
+	function freeze()
+	{
+		$(this).toggleClass('frozen');
+	}
+
+	function roll()
+	{
+		var $dice = $('.dice:not(.frozen)');
+		var numRolls = $dice.length;
+		for(var i = 0; i < numRolls; ++i)
+		{
+			var num = Math.floor(6 * Math.random()) + 1;
+			$($dice[i]).attr('src', 'media/images/dice/die' + num + '.png');
+		}
+>>>>>>> dev
 	}
 
 	function addScore(event)
@@ -24,6 +55,7 @@
 
 	function move(event)
 	{
+<<<<<<< HEAD
 		//event.preventDefault();
 
 		switch(event.keyCode)
@@ -38,6 +70,26 @@
 				--currentRoll;
 				break;
 			case 100:
+=======
+		var key = event.keyCode;
+		if(key >= 37 && key <= 40)
+		{
+			event.preventDefault();
+		}
+
+		switch(event.keyCode)
+		{
+			case 38:
+				--currentUser;
+				break;
+			case 40:
+				++currentUser;
+				break;
+			case 37:
+				--currentRoll;
+				break;
+			case 39:
+>>>>>>> dev
 				++currentRoll;
 		}
 		paintTable();
