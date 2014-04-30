@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+body {
+  background-image: url('../media/triangle-bg.svg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: 'Open Sans', sans-serif;
+}
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-success {
+  background: #52e365;
+}
+.button-error {
+  background: #d2734e;
+}
+.button-warning {
+  background: #df7514;
+}
+.button-secondary {
+  background: rgba(108, 67, 223, 0.55);
+}
+.button-xsmall {
+  font-size: 50%;
+}
+.button-small {
+  font-size: 85%;
+}
+.button-large {
+  font-size: 110%;
+}
+.button-xlarge {
+  font-size: 150%;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+#game > tbody tr:nth-child(2n) {
+  background-color: white;
+}
+#game > tbody tr:nth-child(2n+1) {
+  background-color: #7890b0;
+}
+.horizontal {
+  background-color: #d09898 !important;
+}
+.vertical {
+  background-color: #e0b088 !important;
+}
+#game {
+  opacity: 0.9;
+  font: bold 14px 'Source Code Pro';
+}
+.dice {
+  width: 56px;
+  height: 56px;
+  padding: 5px;
+  cursor: pointer;
+}
+.frozen {
+  border: 5px solid #9461ff;
+  border-radius: 14px;
+  padding: 0;
+}
